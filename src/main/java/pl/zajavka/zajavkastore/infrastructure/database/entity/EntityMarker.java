@@ -1,4 +1,4 @@
 package pl.zajavka.zajavkastore.infrastructure.database.entity;
 
-public interface Marker {
+public interface EntityMarker {
 }
