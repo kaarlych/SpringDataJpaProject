@@ -1,8 +1,12 @@
 package pl.zajavka.zajavkastore.business;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import pl.zajavka.zajavkastore.infrastructure.database.entity.Stars;
 import pl.zajavka.zajavkastore.infrastructure.database.jparepositories.*;
+
+import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -14,11 +18,8 @@ public class SomeService {
     private final ProductDatabaseRepository productDatabaseRepository;
     private final PurchaseDatabaseRepository purchaseDatabaseRepository;
 
+    @Transactional
     public void call() {
-        System.out.println("#Customer: " + customerDatabaseRepository.findById(52));
-        System.out.println("#Opinion: " + opinionDatabaseRepository.findById(13));
-        System.out.println("#Producer: " + producerDatabaseRepository.findById(2));
-        System.out.println("#Product: " + productDatabaseRepository.findById(22));
-        System.out.println("#Purchase: " + purchaseDatabaseRepository.findById(117));
+        System.out.println(opinionDatabaseRepository.countMaxStars());
     }
 }
