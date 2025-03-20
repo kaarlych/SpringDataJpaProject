@@ -16,3 +16,7 @@ Przykladowo: findDistinctByName.
 ### Named Queries and Named Native Queries
 - mozna uzywac razem ze Spring Data JPA ale trzeba pamietac
 o konwencji nazewnictwa.
+
+### Adnotacja @Query
+- przy skomplikowanych zapytaniach lepiej korzystac z @Query
+ze wzgledu na czytelnosc.
