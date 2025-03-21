@@ -45,7 +45,16 @@
     </appender>
 
     <!-- Logger Configurations -->
-    <logger name="com.myapp" level="INFO" />
+    <logger name="pl.zajavka" level="INFO" />
+
+    <!-- Hibernate SQL Logging -->
+    <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="org.hibernate.orm.jdbc.bind" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
 
     <!-- Root Logger -->
     <root level="INFO">
